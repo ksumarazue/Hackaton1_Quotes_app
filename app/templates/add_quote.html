@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Quote</title>
+</head>
+<body>
+    <h1>Add New Quote</h1>
+    <form method="POST" action="{{ url_for('add_quote') }}">
+        <label for="quote">Quote:</label><br>
+        <textarea id="quote" name="quote" rows="4" cols="50"></textarea><br>
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author"><br>
+        <label for="book_name">Book Name:</label><br>
+        <input type="text" id="book_name" name="book_name"><br>
+        <label for="add_date">Add Date:</label><br>
+        <input type="text" id="add_date" name="add_date" value="{{ now.strftime('%m/%d/%Y %H:%M:%S') }}"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

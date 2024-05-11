@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Quotes</title>
+</head>
+<body>
+    <h1>Favorite Quotes</h1>
+    <ul>
+        {% for quote in quotes %}
+        <li><a href="{{ url_for('quote', index=loop.index0) }}">{{ quote.quote }}</a> - {{ quote.author }} ({{ quote.add_date }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_quote') }}">Add New Quote</a>
+</body>
+</html>

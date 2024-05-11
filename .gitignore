@@ -13,6 +13,7 @@ build/
 venv/
 env/
 .env
+Quotes_app/
 
 # IDE specific files
 .idea/
